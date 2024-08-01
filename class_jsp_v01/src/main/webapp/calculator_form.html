@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	body{
+		display: flex;
+		height: 100vh;
+		margin: 0;
+		background-color: #f0f0f0;
+		justify-content: center;
+		align-items: center; 
+	}
+	
+	.container{
+		background-color: white;
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		width: 300px;
+		
+	}
+	
+	form{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	label{
+		margin-bottom: 2px;
+	}
+	
+	input[type="number"]{
+		margin-bottom: 10px;
+		height: 25px;
+		border-radius: 5px;
+		border : 0.01px solid gray;
+		
+	}
+
+	input[type="submit"]{
+		height: 30px;
+		margin-top: 5px;
+		border-radius: 5px;
+		border : 0.01px solid gray;
+		
+	}
+	
+	
+	input[type="submit"]:hover{
+		height: 30px;
+		margin-top: 5px;
+		background-color: #45a049;
+		color: white;
+		border : 0.01px solid transparent;
+		border-radius: 5px;
+		
+		
+	}
+	
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>간단한 사칙연산 계산기</h1>
+		<form action="calculator.jsp" method="PORT">
+			<label for="num1">첫번째 숫자를 입력하시오:</label>
+			<input type="number" id="num1" name="num1" required="required" step="0.01">
+						
+			<label for="symbol">연산 기호를 선택하시오:</label>
+			<select id="symbol" name="symbol">
+				<option value="" disabled selected>-고르기-</option>
+        		<option name="plus" value="+">더하기</option>
+        		<option name="minus" value="-">빼기</option>
+		        <option name="multiple" value="*">곱하기</option>
+        		<option name="divide" value="/">나누기</option>
+      		</select>
+      		
+			<label for="num2">두번째 숫자를 입력하시오:</label>
+			<input type="number" id="num2" name="num2" required="required" step="0.01">
+			
+			<input type="submit" value="계산 요청하기">
+			
+			<p>소숫점 둘째 자리까지 입력이 가능합니다.</p>
+		</form>
+	</div>
+</body>
+</html>

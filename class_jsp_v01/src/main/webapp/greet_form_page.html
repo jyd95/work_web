@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>인사말 생성기</h1>
+	<!-- 주소 설계 - 절대 경로 : 절대적 경로 ==> C:\work_web\class_jsp_v01\src\main\webapp\greet.jsp -->
+	<!-- 주소 설계 - 상대 경로 : 내 기준에서 찾아가기 ==> greet.jsp ( 같은 위치 )-->
+	<form action="greet.jsp" method="POST">
+	<label for="name">당신의 이름을 입력하시오 : </label>
+	<input type="text" id="name" name="name" required="required">
+	<button type="submit">서버로 제출하기</button>
+	</form>
+	
+</body>
+</html>
